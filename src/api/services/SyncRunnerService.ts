@@ -43,7 +43,7 @@ export class SyncRunnerService {
                     let shows = await this.traktTVService.findPopularShows(item.years, item.ratings, item.limit);
                     await this.sonarrService.upsetShows(shows, item);
 
-                } else if (item.enabled && item.listType === ListTypesEnum.Popular) {
+                } else if (item.enabled && item.listType === ListTypesEnum.Trending) {
                     let shows = await this.traktTVService.findTrendingShows(item.years, item.ratings, item.limit);
                     await this.sonarrService.upsetShows(shows, item);
 
